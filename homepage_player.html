@@ -1,0 +1,106 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Umutcan Sezgun</title></head><body style="margin:0;background:#000"><link rel="preload" as="image" href="https://umutcansezgun.github.io/portfolio-media/homepage_poster.jpg"><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+html,body{margin:0;height:100%;background:transparent;overflow:hidden}
+#w{position:absolute;inset:0;background:#000;overflow:hidden;font-family:Lexend,system-ui,sans-serif;-webkit-user-select:none;user-select:none}
+#v{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:block}
+#po{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+#cl{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;pointer-events:none}
+#cb{position:absolute;left:50%;transform:translateX(-50%);display:none;box-sizing:border-box;background:#000;color:#fff;border-radius:12px;padding:14px 34px;font:500 34px/1.3 Lexend,system-ui,sans-serif;text-align:center;white-space:nowrap;align-items:center;justify-content:center}
+#pb{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border:0;border-radius:50%;background:rgba(17,18,20,.82);cursor:pointer;padding:0;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#pb:hover{transform:scale(1.06);background:#111214}
+#pb svg{display:block;margin-left:33px}
+#bar{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 8px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:none;opacity:1;transition:opacity .25s}
+#w.idle #bar{opacity:0}#w.idle{cursor:none}
+#pr{position:relative;height:14px;cursor:pointer;margin:0 4px}
+#pr i{position:absolute;left:0;right:0;top:6px;height:3px;border-radius:2px;background:rgba(255,255,255,.3)}
+#pr b{position:absolute;left:0;top:6px;height:3px;border-radius:2px;background:#fff}
+#pr s{position:absolute;top:2px;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:#fff}
+#row{display:flex;align-items:center;gap:6px;height:36px}
+#row button{background:none;border:0;color:#fff;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;height:36px}
+#tm{font:500 13px/1 Lexend,system-ui,sans-serif;margin-left:4px;font-variant-numeric:tabular-nums}
+#sp{flex:1}
+#cc{font:600 12px/1 Lexend,system-ui,sans-serif;letter-spacing:.04em}
+#cc span{border:1.5px solid #fff;border-radius:4px;padding:3px 5px}
+#cc.on span{background:#fff;color:#000}
+</style>
+<div id="w">
+<video id="v" playsinline preload="metadata" crossorigin="anonymous"><source src="https://umutcansezgun.github.io/portfolio-media/homepage.mp4" type="video/mp4"><track kind="subtitles" srclang="tr" label="Türkçe" src="https://umutcansezgun.github.io/portfolio-media/homepage_tr.vtt"></video>
+<img id="po" src="https://umutcansezgun.github.io/portfolio-media/homepage_poster.jpg" alt="" fetchpriority="high" decoding="async">
+<div id="cl"><div id="cb"></div></div>
+<button id="pb" aria-label="Play video"><svg width="34" height="38" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg></button>
+<div id="bar">
+<div id="pr"><i></i><b></b><s></s></div>
+<div id="row">
+<button id="pp" aria-label="Play or pause"></button>
+<button id="mu" aria-label="Mute"></button>
+<span id="tm">0:00 / 0:00</span><span id="sp"></span>
+<button id="cc" aria-label="Turkish subtitles" title="Türkçe altyazı"><span>CC</span></button>
+<button id="fs" aria-label="Fullscreen"></button>
+</div></div>
+</div>
+<script>
+(function(){
+var C=[{"s":0.0,"e":3.41,"t":["Bugün yapay zeka bir arayüzü","saniyeler içinde üretebiliyor."],"w":550,"y0":875,"y1":1040},{"s":3.41,"e":7.31,"t":["Peki o arayüzün doğru problemi çözüp","çözmediğine kim karar veriyor?"],"w":580,"y0":875,"y1":1040},{"s":7.31,"e":11.74,"t":["Merhaba, ben Umutcan, yapay zekayı","yönlendiren bir UX ve Product Designer."],"w":453,"y0":875,"y1":1040},{"s":11.74,"e":16.11,"t":["Türkiye'de Görsel İletişim Tasarımı","lisansımın ardından Avustralya'ya taşındım."],"w":472,"y0":940,"y1":1030},{"s":16.11,"e":18.8,"t":["Yedi yıl Melbourne'da yaşadım ve çalıştım."],"w":455,"y0":940,"y1":1030},{"s":18.8,"e":22.965,"t":["Swinburne University'de master yaptım,","ardından çok kültürlü ekiplerle birlikte,"],"w":720,"y0":940,"y1":1030},{"s":22.965,"e":26.4,"t":["çok kültürlü bir kullanıcı kitlesi için","dijital deneyimler tasarladım."],"w":720,"y0":940,"y1":1030},{"s":26.4,"e":30.951,"t":["Farklı dillerden ve kültürlerden gelen","kullanıcıların aynı arayüzü"],"w":752,"y0":940,"y1":1030},{"s":30.951,"e":35.8,"t":["aynı netlikte anlaması, o yıllardan beri","tasarımlarımın çıkış noktası."],"w":713,"y0":940,"y1":1030},{"s":35.8,"e":39.755,"t":["Yapay zekayla her gün çalışıyorum:","kullanıcı araştırmasında,"],"w":767,"y0":940,"y1":1030},{"s":39.755,"e":42.742,"t":["Figma'da arayüz tasarlarken,","görüşme notlarını tutarken"],"w":774,"y0":940,"y1":1030},{"s":42.742,"e":44.4,"t":["ve dokümantasyon hazırlarken."],"w":774,"y0":940,"y1":1030},{"s":44.4,"e":48.36,"t":["Tasarım sistemlerimi de yapay zeka ajanlarının","doğru okuyabileceği şekilde kuruyorum."],"w":803,"y0":940,"y1":1030},{"s":48.36,"e":53.04,"t":["Portfolyomdaki projeler, bunu nasıl","yaptığımı ve ne sonuç aldığımı gösteriyor."],"w":803,"y0":940,"y1":1030},{"s":53.04,"e":56.654,"t":["AI Design System projemde,","bir lojistik aracı için kurduğum"],"w":769,"y0":940,"y1":1030},{"s":56.654,"e":61.32,"t":["tasarım sistemini bir yapay zeka ajanının","ne kadar doğru okuyabildiğini test ettim."],"w":769,"y0":940,"y1":1030},{"s":61.32,"e":64.813,"t":["Ajanın kusursuz görünen ekranındaki","gizli hataları yakaladım,"],"w":791,"y0":940,"y1":1030},{"s":64.813,"e":69.76,"t":["yanlış teşhisini reddettim ve sistemi","ajanın okuyabileceği şekilde yeniden kurdum."],"w":791,"y0":940,"y1":1030},{"s":69.76,"e":74.189,"t":["İkinci projem AI Symptom Checker'da","Claude'a, kendi WAVE taramamdaki"],"w":855,"y0":940,"y1":1030},{"s":74.189,"e":77.701,"t":["gerçek renk değerlerinden","yazıların okunaklılığını hesaplattım"],"w":896,"y0":940,"y1":1030},{"s":77.701,"e":81.66,"t":["ve her bulguyu uluslararası","erişilebilirlik standardıyla eşleştirttim."],"w":896,"y0":940,"y1":1030},{"s":81.66,"e":84.401,"t":["Ardından sayfanın ekran okuyucuyla","nasıl duyulduğunu"],"w":747,"y0":940,"y1":1030},{"s":84.401,"e":87.76,"t":["gerçek bir iPhone'da VoiceOver ile","kendim test ettim."],"w":661,"y0":940,"y1":1030},{"s":87.76,"e":93.13,"t":["Diğer projem N26'da ise LLM'lere","gerçek kullanıcı şikayetlerini araştırttım"],"w":546,"y0":940,"y1":1030},{"s":93.13,"e":95.9,"t":["ve her birini kaynağından kendim doğruladım."],"w":637,"y0":940,"y1":1030},{"s":95.9,"e":98.551,"t":["Ardından kullanıcı akışını yeniden oluşturdum,"],"w":684,"y0":940,"y1":1030},{"s":98.551,"e":102.43,"t":["Claude'u Figma'ya bağlayıp ekranları,","hangi bileşenin nerede duracağını"],"w":684,"y0":940,"y1":1030},{"s":102.43,"e":104.58,"t":["adım adım tarif ederek tasarlattım."],"w":644,"y0":940,"y1":1030},{"s":104.58,"e":107.732,"t":["Üç projede de yapay zeka","süreci hızlandırdı,"],"w":706,"y0":940,"y1":1030},{"s":107.732,"e":112.56,"t":["ama başarılı sonuca ulaştıran","verdiğim kararlar ve yönlendirmelerdi."],"w":799,"y0":875,"y1":1040},{"s":112.56,"e":115.34,"t":["Projelerimin tamamını","portfolyomda inceleyebilirsiniz."],"w":671,"y0":940,"y1":1030},{"s":115.34,"e":118.914,"t":["Yapay zekayla hızlı çalışan ve onu","doğru probleme yönlendiren"],"w":0,"y0":null,"y1":null},{"s":118.914,"e":121.644,"t":["bir UX ya da Product Designer arıyorsanız,"],"w":432,"y0":940,"y1":1030},{"s":121.644,"e":124.74,"t":["benimle iletişime geçip","CV'mi talep edebilirsiniz."],"w":432,"y0":940,"y1":1030}];
+var w=document.getElementById('w'),v=document.getElementById('v'),cl=document.getElementById('cl'),cb=document.getElementById('cb'),
+pb=document.getElementById('pb'),bar=document.getElementById('bar'),pr=document.getElementById('pr'),pp=document.getElementById('pp'),
+mu=document.getElementById('mu'),po=document.getElementById('po'),tm=document.getElementById('tm'),cc=document.getElementById('cc'),fs=document.getElementById('fs');
+var I={play:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M7 4.5v15c0 .8.9 1.3 1.6.9l12-7.5c.6-.4.6-1.4 0-1.8l-12-7.5C7.9 3.2 7 3.7 7 4.5z" fill="#fff"/></svg>',
+pause:'<svg width="20" height="20" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="#fff"/><rect x="14" y="4" width="4" height="16" rx="1" fill="#fff"/></svg>',
+vol:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+mute:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',
+fs:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+var PAGE=true,on=false,cur=-1,drag=false,tr=v.textTracks&&v.textTracks[0];
+if(tr)tr.mode='disabled';
+function fit(){var s=w.clientWidth/1920,h=w.clientHeight/1080,k=Math.min(s,h);cl.style.transform='translate('+((w.clientWidth-1920*k)/2)+'px,'+((w.clientHeight-1080*k)/2)+'px) scale('+k+')';}
+function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+('0'+t%60).slice(-2);}
+function cap(){var t=v.currentTime,i=-1;if(on){for(var j=0;j<C.length;j++){if(t>=C[j].s&&t<C[j].e){i=j;break;}}}
+ if(i!==cur){cur=i;if(i<0){cb.style.display='none';}else{var c=C[i];cb.innerHTML=c.t.join('<br>');cb.style.minWidth=c.w+'px';
+  var y1=c.y1||1030,y0=c.y0||1030;cb.style.minHeight=(y1-y0)+'px';cb.style.top='auto';cb.style.bottom=(1080-y1)+'px';cb.style.display='flex';}}}
+function ui(){pp.innerHTML=v.paused?I.play:I.pause;mu.innerHTML=v.muted?I.mute:I.vol;var d=v.duration||0,p=d?v.currentTime/d*100:0;
+ pr.querySelector('b').style.width=p+'%';pr.querySelector('s').style.left=p+'%';tm.textContent=fmt(v.currentTime)+' / '+fmt(d);}
+function loop(){cap();ui();if(!v.paused)requestAnimationFrame(loop);}
+var it;function wake(){w.classList.remove('idle');clearTimeout(it);it=setTimeout(function(){if(!drag)w.classList.add('idle');},2500);}
+function start(){pb.style.display='none';bar.style.display='block';v.play();wake();}
+var Q={};(location.hash||'').slice(1).split('&').forEach(function(x){var k=x.split('=');if(k[0])Q[k[0]]=k[1];});
+var T0=PAGE&&parseFloat(Q.t)>0?parseFloat(Q.t):0;if(PAGE&&Q.cc==='1'){on=true;cc.classList.add('on');}
+if(T0){v.addEventListener('loadedmetadata',function(){v.currentTime=T0;ui();cap();},{once:true});}
+pb.onclick=function(){if(T0)goFs();start();};
+v.addEventListener('click',function(){if(bar.style.display!=='block'){start();return;}v.paused?v.play():v.pause();});
+pp.onclick=function(){v.paused?v.play():v.pause();};
+mu.onclick=function(){v.muted=!v.muted;ui();};
+cc.onclick=function(){on=!on;cc.classList.toggle('on',on);cur=-2;cap();};
+v.addEventListener('play',function(){po.style.display='none';pb.style.display='none';bar.style.display='block';wake();loop();});
+v.addEventListener('pause',function(){wake();ui();cap();});
+['timeupdate','seeked','loadedmetadata','volumechange','ended'].forEach(function(e){v.addEventListener(e,function(){ui();cap();});});
+w.addEventListener('mousemove',wake);w.addEventListener('mouseleave',function(){if(!drag){clearTimeout(it);w.classList.add('idle');}});w.addEventListener('touchstart',wake,{passive:true});
+function seekTo(x){var r=pr.getBoundingClientRect(),f=Math.min(1,Math.max(0,(x-r.left)/r.width));if(v.duration){v.currentTime=f*v.duration;ui();cap();}}
+pr.addEventListener('pointerdown',function(e){drag=true;pr.setPointerCapture(e.pointerId);seekTo(e.clientX);});
+pr.addEventListener('pointermove',function(e){if(drag)seekTo(e.clientX);});
+pr.addEventListener('pointerup',function(){drag=false;});
+var canFs=document.fullscreenEnabled||document.webkitFullscreenEnabled;
+fs.innerHTML=I.fs;
+var PURL='https://umutcansezgun.github.io/portfolio-media/homepage_player.html';
+function goFs(){if(canFs){(w.requestFullscreen||w.webkitRequestFullscreen).call(w);}else if(PAGE&&v.webkitEnterFullscreen){v.webkitEnterFullscreen();}}
+fs.onclick=function(){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d);return;}
+ if(canFs||PAGE){goFs();return;}
+ var t=v.currentTime,wasPlaying=!v.paused;var pw=window.open(PURL+'#t='+t.toFixed(2)+'&cc='+(on?1:0),'_blank');
+ if(!pw)return;v.pause();last={t:t,cc:on,playing:wasPlaying};
+ var pt=setInterval(function(){if(pw.closed){clearInterval(pt);resume();}},400);};
+var last=null,PORIGIN=new URL(PURL,location.href).origin;
+window.addEventListener('message',function(e){if(e.origin===PORIGIN&&e.data&&e.data.type==='ucs-player'&&typeof e.data.t==='number')last=e.data;});
+function resume(){if(!last)return;var d=last;last=null;v.currentTime=d.t;on=!!d.cc;cc.classList.toggle('on',on);cur=-2;
+ po.style.display='none';pb.style.display='none';bar.style.display='block';
+ if(d.playing){var pr2=v.play();if(pr2&&pr2.catch)pr2.catch(function(){ui();});}ui();cap();wake();}
+if(PAGE&&window.opener){var post=function(){try{window.opener.postMessage({type:'ucs-player',t:v.currentTime,cc:on,playing:!v.paused&&!v.ended},'*');}catch(e){}};
+ ['timeupdate','play','pause','seeked'].forEach(function(e){v.addEventListener(e,post);});
+ cc.addEventListener('click',post);window.addEventListener('pagehide',post);
+ var wasFs=false;var fsc=function(){if(document.fullscreenElement||document.webkitFullscreenElement){wasFs=true;}else if(wasFs){post();window.close();}};
+ document.addEventListener('fullscreenchange',fsc);document.addEventListener('webkitfullscreenchange',fsc);
+ v.addEventListener('webkitendfullscreen',function(){post();window.close();});}
+v.addEventListener('webkitbeginfullscreen',function(){if(tr)tr.mode=on?'showing':'disabled';});
+v.addEventListener('webkitendfullscreen',function(){if(tr)tr.mode='disabled';});
+window.addEventListener('resize',fit);document.addEventListener('fullscreenchange',fit);document.addEventListener('webkitfullscreenchange',fit);
+fit();ui();
+})();
+</script>
+</body></html>
