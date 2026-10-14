@@ -8,6 +8,9 @@ html,body{margin:0;height:100%;background:transparent;overflow:hidden}
 #cb{position:absolute;left:50%;transform:translateX(-50%);display:none;box-sizing:border-box;background:#000;color:#fff;border-radius:12px;padding:14px 34px;font:500 34px/1.3 Lexend,system-ui,sans-serif;text-align:center;white-space:nowrap;align-items:center;justify-content:center}
 #pb{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border:0;border-radius:50%;background:rgba(17,18,20,.82);cursor:pointer;padding:0;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
 #pb:hover{transform:scale(1.06);background:#111214}
+#fo{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.18);cursor:pointer}
+#fo span{display:flex;align-items:center;gap:14px;background:rgba(17,18,20,.88);color:#fff;border-radius:999px;padding:18px 30px;font:500 clamp(16px,1.5vw,24px)/1 Lexend,system-ui,sans-serif;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#fo:hover span{transform:scale(1.04);background:#111214}
 #pb svg{display:block;margin-left:33px}
 #bar{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 8px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:none;opacity:1;transition:opacity .25s}
 #w.idle #bar{opacity:0}#w.idle{cursor:none}
@@ -28,6 +31,7 @@ html,body{margin:0;height:100%;background:transparent;overflow:hidden}
 <img id="po" src="https://umutcansezgun.github.io/portfolio-media/homepage_poster.jpg" alt="" fetchpriority="high" decoding="async">
 <div id="cl"><div id="cb"></div></div>
 <button id="pb" aria-label="Play video"><svg width="34" height="38" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg></button>
+<div id="fo" role="button" aria-label="Watch in full screen"><span><svg width="20" height="22" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg>Click to watch in full screen</span></div>
 <div id="bar">
 <div id="pr"><i></i><b></b><s></s></div>
 <div id="row">
@@ -65,11 +69,12 @@ var Q={};(location.hash||'').slice(1).split('&').forEach(function(x){var k=x.spl
 var T0=PAGE&&parseFloat(Q.t)>0?parseFloat(Q.t):0;if(PAGE&&Q.cc==='1'){on=true;cc.classList.add('on');}
 if(T0){v.addEventListener('loadedmetadata',function(){v.addEventListener('seeked',function(){po.style.display='none';},{once:true});v.currentTime=T0;ui();cap();},{once:true});}
 pb.onclick=function(){if(T0)goFs();start();};
+var fo=document.getElementById('fo');if(T0){pb.style.display='none';fo.style.display='flex';fo.onclick=function(){fo.style.display='none';goFs();start();};}
 v.addEventListener('click',function(){if(bar.style.display!=='block'){start();return;}v.paused?v.play():v.pause();});
 pp.onclick=function(){v.paused?v.play():v.pause();};
 mu.onclick=function(){v.muted=!v.muted;ui();};
 cc.onclick=function(){on=!on;cc.classList.toggle('on',on);cur=-2;cap();};
-v.addEventListener('play',function(){po.style.display='none';pb.style.display='none';bar.style.display='block';wake();loop();});
+v.addEventListener('play',function(){if(fo)fo.style.display='none';po.style.display='none';pb.style.display='none';bar.style.display='block';wake();loop();});
 v.addEventListener('pause',function(){wake();ui();cap();});
 ['timeupdate','seeked','loadedmetadata','volumechange','ended'].forEach(function(e){v.addEventListener(e,function(){ui();cap();});});
 w.addEventListener('mousemove',wake);w.addEventListener('mouseleave',function(){if(!drag){clearTimeout(it);w.classList.add('idle');}});w.addEventListener('touchstart',wake,{passive:true});
