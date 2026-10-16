@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Umutcan Sezgun</title></head><body style="margin:0;background:#000"><link rel="preload" as="image" href="https://umutcansezgun.github.io/portfolio-media/design_system_poster.jpg"><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+html,body{margin:0;height:100%;background:transparent;overflow:hidden}
+#w{position:absolute;inset:0;background:#000;overflow:hidden;font-family:Lexend,system-ui,sans-serif;-webkit-user-select:none;user-select:none}
+#v{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:block}
+#po{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+#cl{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;pointer-events:none}
+#cb{position:absolute;left:50%;transform:translateX(-50%);display:none;box-sizing:border-box;background:#000;color:#fff;border-radius:12px;padding:14px 34px;font:500 34px/1.3 Lexend,system-ui,sans-serif;text-align:center;white-space:nowrap;align-items:center;justify-content:center}
+#pb{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border:0;border-radius:50%;background:rgba(17,18,20,.82);cursor:pointer;padding:0;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#pb:hover{transform:scale(1.06);background:#111214}
+#fo{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.18);cursor:pointer}
+#fo span{display:flex;align-items:center;gap:14px;background:rgba(17,18,20,.88);color:#fff;border-radius:999px;padding:18px 30px;font:500 clamp(16px,1.5vw,24px)/1 Lexend,system-ui,sans-serif;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#fo:hover span{transform:scale(1.04);background:#111214}
+#pb svg{display:block;margin-left:33px}
+#bar{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 8px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:none;opacity:1;transition:opacity .25s}
+#w.idle #bar{opacity:0}#w.idle{cursor:none}
+#pr{position:relative;height:14px;cursor:pointer;margin:0 4px}
+#pr i{position:absolute;left:0;right:0;top:6px;height:3px;border-radius:2px;background:rgba(255,255,255,.3)}
+#pr b{position:absolute;left:0;top:6px;height:3px;border-radius:2px;background:#fff}
+#pr s{position:absolute;top:2px;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:#fff}
+#row{display:flex;align-items:center;gap:6px;height:36px}
+#row button{background:none;border:0;color:#fff;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;height:36px}
+#tm{font:500 13px/1 Lexend,system-ui,sans-serif;margin-left:4px;font-variant-numeric:tabular-nums}
+#sp{flex:1}
+#cc{font:600 12px/1 Lexend,system-ui,sans-serif;letter-spacing:.04em}
+#cc span{border:1.5px solid #fff;border-radius:4px;padding:3px 5px}
+#cc.on span{background:#fff;color:#000}
+</style>
+<div id="w">
+<video id="v" playsinline preload="metadata" crossorigin="anonymous"><source src="https://umutcansezgun.github.io/portfolio-media/design_system.mp4" type="video/mp4"><track kind="subtitles" srclang="tr" label="Türkçe" src="https://umutcansezgun.github.io/portfolio-media/design_system_tr.vtt"></video>
+<img id="po" src="https://umutcansezgun.github.io/portfolio-media/design_system_poster.jpg" alt="" fetchpriority="high" decoding="async">
+<div id="cl"><div id="cb"></div></div>
+<button id="pb" aria-label="Play video"><svg width="34" height="38" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg></button>
+<div id="fo" role="button" aria-label="Watch in full screen"><span><svg width="20" height="22" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg>Click to watch in full screen</span></div>
+<div id="bar">
+<div id="pr"><i></i><b></b><s></s></div>
+<div id="row">
+<button id="pp" aria-label="Play or pause"></button>
+<button id="mu" aria-label="Mute"></button>
+<span id="tm">0:00 / 0:00</span><span id="sp"></span>
+<button id="cc" aria-label="Turkish subtitles" title="Türkçe altyazı"><span>CC</span></button>
+<button id="fs" aria-label="Fullscreen"></button>
+</div></div>
+</div>
+<script>
+(function(){
+var C=[{"s":1.08,"e":3.97,"t":["Yapay zeka ajanları, gerçek bir","ürün tasarımı problemini"],"w":0,"y0":null,"y1":null},{"s":3.97,"e":6.8,"t":["bir tasarımcı yönü belirlemeden","çözebilir mi?"],"w":0,"y0":null,"y1":null},{"s":6.8,"e":10.95,"t":["Bunu görmek için bir lojistik operasyon","aracına tasarım sistemi kurdum,"],"w":643,"y0":940,"y1":1030},{"s":10.95,"e":14.94,"t":["yani renklerin, ölçülerin ve bileşenlerin","kurallarını tek bir yerde topladım."],"w":719,"y0":940,"y1":1030},{"s":14.94,"e":19.81,"t":["Sonra basit bir deney tasarladım:","aynı ajan, aynı istem, aynı ekran."],"w":848,"y0":940,"y1":1030},{"s":19.81,"e":23.62,"t":["Değişen tek şey,","ajana verdiğim sistem."],"w":848,"y0":940,"y1":1030},{"s":23.62,"e":27.408,"t":["Claude'a altı bileşenlik kütüphaneyi ve","sistem dosyalarının ilk taslağını"],"w":828,"y0":940,"y1":1030},{"s":27.408,"e":30.16,"t":["benim yazdığım spesifikasyona","göre ürettirdim."],"w":828,"y0":940,"y1":1030},{"s":30.16,"e":32.67,"t":["Her durum renginin ne anlama","geldiğine ben karar verdim,"],"w":853,"y0":940,"y1":1030},{"s":32.67,"e":37.74,"t":["ilk denemeden önce de ekranı hangi","altı kurala göre puanlayacağımı yazdım."],"w":853,"y0":940,"y1":1030},{"s":38.05,"e":42.28,"t":["Sonra ajandan daha önce hiç tasarlanmamış","bir sevkiyat detay ekranı istedim."],"w":607,"y0":940,"y1":1030},{"s":42.28,"e":43.394,"t":["Ekran kusursuz görünüyordu."],"w":586,"y0":940,"y1":1030},{"s":43.394,"e":47.13,"t":["Ama kodu saydığımda","31 ihlal çıktı:"],"w":648,"y0":940,"y1":1030},{"s":47.13,"e":50.434,"t":["22'si sistemin renklerini atlayıp","ham renk değerlerini kullanıyordu,"],"w":648,"y0":940,"y1":1030},{"s":50.434,"e":53.14,"t":["9'u ölçü cetvelinin dışındaydı."],"w":793,"y0":940,"y1":1030},{"s":53.14,"e":55.1,"t":["Yüzeyde hiçbiri görünmüyordu."],"w":793,"y0":940,"y1":1030},{"s":55.63,"e":58.8,"t":["Claude'a sebebini sorduğumda sorunu","renklerin isimlerine bağladı."],"w":580,"y0":940,"y1":1030},{"s":58.8,"e":62.03,"t":["Ama dosyaya baktığımda asıl sorunun","başka olduğunu gördüm:"],"w":645,"y0":940,"y1":1030},{"s":62.03,"e":64.9,"t":["ham renkler ajan için","hâlâ ulaşılabilirdi."],"w":538,"y0":940,"y1":1030},{"s":64.9,"e":67.49,"t":["Ben de istemi değil,","sistemi değiştirdim."],"w":583,"y0":940,"y1":1030},{"s":67.49,"e":71.71,"t":["Ham renkleri kapattım, “kaçın” diye yazılmış","tavsiyeleri kesin kurallara çevirdim,"],"w":758,"y0":940,"y1":1030},{"s":71.71,"e":74.59,"t":["her bileşene doğru kullanımı kontrol","eden bir liste ekledim"],"w":728,"y0":940,"y1":1030},{"s":74.59,"e":76.57,"t":["ve sistemi iki biçimde yayınladım:"],"w":684,"y0":940,"y1":1030},{"s":76.57,"e":80.86,"t":["tasarımcılar için Figma kütüphanesi,","ajan için de okuyabileceği dosyalar."],"w":630,"y0":940,"y1":1030},{"s":80.86,"e":83.84,"t":["Bu sırada ajanın gözden kaçırdığı","şeyleri de yakaladım."],"w":793,"y0":940,"y1":1030},{"s":83.84,"e":88.73,"t":["“İncelemede” durum etiketi, rengini sistemin","yasakladığı buton renginden alıyordu,"],"w":793,"y0":940,"y1":1030},{"s":88.73,"e":91.83,"t":["o duruma kendi rengini verdim."],"w":530,"y0":940,"y1":1030},{"s":91.83,"e":95.76,"t":["Ajandan kendi çıktısını denetlemesini","istediğimde de iki kez yanıldı:"],"w":530,"y0":940,"y1":1030},{"s":95.76,"e":98.03,"t":["kurala uyan boşlukları ihlal saydı,"],"w":507,"y0":940,"y1":1030},{"s":98.03,"e":100.87,"t":["“transparent” kelimesini de bir renk sandı."],"w":698,"y0":940,"y1":1030},{"s":100.87,"e":105.39,"t":["Kuralın neyi kapsadığına ben karar verdim,","her çıktıyı iki ayrı yöntemle saydırdım"],"w":712,"y0":940,"y1":1030},{"s":105.39,"e":107.78,"t":["ve sonuçları kendim uzlaştırdım."],"w":712,"y0":940,"y1":1030},{"s":108.12,"e":111.96,"t":["Aynı üç satırlık istemle","ihlaller 31'den 8'e düştü,"],"w":754,"y0":940,"y1":1030},{"s":111.96,"e":114.82,"t":["renk ihlallerinin hepsi kayboldu."],"w":754,"y0":940,"y1":1030},{"s":114.82,"e":116.76,"t":["Kalan 8'in hepsi ölçü kuralıydı,"],"w":608,"y0":940,"y1":1030},{"s":116.76,"e":119.69,"t":["çünkü o kural hâlâ dokümanda","sadece bir liste olarak duruyordu."],"w":684,"y0":940,"y1":1030},{"s":119.69,"e":121.57,"t":["Üçüncü denemenin sonucunu da saklamadım:"],"w":684,"y0":940,"y1":1030},{"s":121.57,"e":125.14,"t":["bütün kuralları elle tekrar yazan","uzun bir istem sıfır ihlal verdi."],"w":753,"y0":940,"y1":1030},{"s":125.14,"e":128.34,"t":["Ama o istem her ekran için","yeniden yazılmak zorunda,"],"w":827,"y0":940,"y1":1030},{"s":128.34,"e":131.73,"t":["sistem ise her seferinde okunuyor."],"w":827,"y0":940,"y1":1030},{"s":131.73,"e":135.26,"t":["Yani ajan çok hızlı üretiyor,","ama yönlendirme olmadan sorunsuz değil."],"w":720,"y0":940,"y1":1030},{"s":135.26,"e":138.35,"t":["Bir gümrük beklemesinin kritik mi yoksa","sadece gecikme mi olduğuna,"],"w":720,"y0":940,"y1":1030},{"s":138.35,"e":141.39,"t":["sinyal vermeyen bir sevkiyatın ayrı","bir durum olup olmadığına"],"w":646,"y0":940,"y1":1030},{"s":141.39,"e":142.95,"t":["ben karar verdim."],"w":646,"y0":940,"y1":1030},{"s":142.95,"e":146.75,"t":["Yön bir istemde değil,","sistemde durmalı."],"w":0,"y0":null,"y1":null},{"s":146.75,"e":150.28,"t":["Kurduğum sistemi, ajanın ürettiği ekranları"],"w":736,"y0":940,"y1":1030},{"s":150.28,"e":153.57,"t":["ve üç denemenin sonuçlarını","bu sayfada inceleyebilirsiniz."],"w":668,"y0":940,"y1":1030}];
+var w=document.getElementById('w'),v=document.getElementById('v'),cl=document.getElementById('cl'),cb=document.getElementById('cb'),
+pb=document.getElementById('pb'),bar=document.getElementById('bar'),pr=document.getElementById('pr'),pp=document.getElementById('pp'),
+mu=document.getElementById('mu'),po=document.getElementById('po'),tm=document.getElementById('tm'),cc=document.getElementById('cc'),fs=document.getElementById('fs');
+var I={play:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M7 4.5v15c0 .8.9 1.3 1.6.9l12-7.5c.6-.4.6-1.4 0-1.8l-12-7.5C7.9 3.2 7 3.7 7 4.5z" fill="#fff"/></svg>',
+pause:'<svg width="20" height="20" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="#fff"/><rect x="14" y="4" width="4" height="16" rx="1" fill="#fff"/></svg>',
+vol:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+mute:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',
+fs:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+var PAGE=true,on=false,cur=-1,drag=false,tr=v.textTracks&&v.textTracks[0];
+if(tr)tr.mode='disabled';
+function fit(){var s=w.clientWidth/1920,h=w.clientHeight/1080,k=Math.min(s,h);cl.style.transform='translate('+((w.clientWidth-1920*k)/2)+'px,'+((w.clientHeight-1080*k)/2)+'px) scale('+k+')';}
+function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+('0'+t%60).slice(-2);}
+function cap(){var t=v.currentTime,i=-1;if(on){for(var j=0;j<C.length;j++){if(t>=C[j].s&&t<C[j].e){i=j;break;}}}
+ if(i!==cur){cur=i;if(i<0){cb.style.display='none';}else{var c=C[i];cb.innerHTML=c.t.join('<br>');cb.style.minWidth=c.w+'px';
+  var y1=c.y1||1030,y0=c.y0||1030;cb.style.minHeight=(y1-y0)+'px';cb.style.top='auto';cb.style.bottom=(1080-y1)+'px';cb.style.display='flex';}}}
+function ui(){pp.innerHTML=v.paused?I.play:I.pause;mu.innerHTML=v.muted?I.mute:I.vol;var d=v.duration||0,p=d?v.currentTime/d*100:0;
+ pr.querySelector('b').style.width=p+'%';pr.querySelector('s').style.left=p+'%';tm.textContent=fmt(v.currentTime)+' / '+fmt(d);}
+function loop(){cap();ui();if(!v.paused)requestAnimationFrame(loop);}
+var it;function wake(){w.classList.remove('idle');clearTimeout(it);it=setTimeout(function(){if(!drag)w.classList.add('idle');},2500);}
+function start(){pb.style.display='none';bar.style.display='block';v.play();wake();}
+var Q={};(location.hash||'').slice(1).split('&').forEach(function(x){var k=x.split('=');if(k[0])Q[k[0]]=k[1];});
+var T0=PAGE&&parseFloat(Q.t)>0?parseFloat(Q.t):0;if(PAGE&&Q.cc==='1'){on=true;cc.classList.add('on');}
+if(T0){v.addEventListener('loadedmetadata',function(){v.addEventListener('seeked',function(){po.style.display='none';},{once:true});v.currentTime=T0;ui();cap();},{once:true});}
+pb.onclick=function(){if(T0)goFs();start();};
+var fo=document.getElementById('fo');if(T0){pb.style.display='none';fo.style.display='flex';fo.onclick=function(){fo.style.display='none';goFs();start();};}
+v.addEventListener('click',function(){if(bar.style.display!=='block'){start();return;}v.paused?v.play():v.pause();});
+pp.onclick=function(){v.paused?v.play():v.pause();};
+mu.onclick=function(){v.muted=!v.muted;ui();};
+cc.onclick=function(){on=!on;cc.classList.toggle('on',on);cur=-2;cap();};
+v.addEventListener('play',function(){if(fo)fo.style.display='none';po.style.display='none';pb.style.display='none';bar.style.display='block';wake();loop();});
+v.addEventListener('pause',function(){wake();ui();cap();});
+['timeupdate','seeked','loadedmetadata','volumechange','ended'].forEach(function(e){v.addEventListener(e,function(){ui();cap();});});
+w.addEventListener('mousemove',wake);w.addEventListener('mouseleave',function(){if(!drag){clearTimeout(it);w.classList.add('idle');}});w.addEventListener('touchstart',wake,{passive:true});
+function seekTo(x){var r=pr.getBoundingClientRect(),f=Math.min(1,Math.max(0,(x-r.left)/r.width));if(v.duration){v.currentTime=f*v.duration;ui();cap();}}
+pr.addEventListener('pointerdown',function(e){drag=true;pr.setPointerCapture(e.pointerId);seekTo(e.clientX);});
+pr.addEventListener('pointermove',function(e){if(drag)seekTo(e.clientX);});
+pr.addEventListener('pointerup',function(){drag=false;});
+var canFs=document.fullscreenEnabled||document.webkitFullscreenEnabled;
+fs.innerHTML=I.fs;
+var PURL='https://umutcansezgun.github.io/portfolio-media/design_system_player.html';
+function goFs(){if(canFs){(w.requestFullscreen||w.webkitRequestFullscreen).call(w);}else if(PAGE&&v.webkitEnterFullscreen){v.webkitEnterFullscreen();}}
+fs.onclick=function(){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d);return;}
+ if(canFs||PAGE){goFs();return;}
+ var t=v.currentTime,wasPlaying=!v.paused;var pw=window.open(PURL+'#t='+t.toFixed(2)+'&cc='+(on?1:0),'_blank');
+ if(!pw)return;v.pause();last={t:t,cc:on,playing:wasPlaying};
+ var pt=setInterval(function(){if(pw.closed){clearInterval(pt);resume();}},400);};
+var last=null,PORIGIN=new URL(PURL,location.href).origin;
+window.addEventListener('message',function(e){if(e.origin===PORIGIN&&e.data&&e.data.type==='ucs-player'&&typeof e.data.t==='number')last=e.data;});
+function resume(){if(!last)return;var d=last;last=null;v.currentTime=d.t;on=!!d.cc;cc.classList.toggle('on',on);cur=-2;
+ po.style.display='none';pb.style.display='none';bar.style.display='block';
+ if(d.playing){var pr2=v.play();if(pr2&&pr2.catch)pr2.catch(function(){ui();});}ui();cap();wake();}
+if(PAGE&&window.opener){var post=function(){try{window.opener.postMessage({type:'ucs-player',t:v.currentTime,cc:on,playing:!v.paused&&!v.ended},'*');}catch(e){}};
+ ['timeupdate','play','pause','seeked'].forEach(function(e){v.addEventListener(e,post);});
+ cc.addEventListener('click',post);window.addEventListener('pagehide',post);
+ var wasFs=false;var fsc=function(){if(document.fullscreenElement||document.webkitFullscreenElement){wasFs=true;}else if(wasFs){post();window.close();}};
+ document.addEventListener('fullscreenchange',fsc);document.addEventListener('webkitfullscreenchange',fsc);
+ v.addEventListener('webkitendfullscreen',function(){post();window.close();});}
+v.addEventListener('webkitbeginfullscreen',function(){if(tr)tr.mode=on?'showing':'disabled';});
+v.addEventListener('webkitendfullscreen',function(){if(tr)tr.mode='disabled';});
+window.addEventListener('resize',fit);document.addEventListener('fullscreenchange',fit);document.addEventListener('webkitfullscreenchange',fit);
+fit();ui();
+})();
+</script>
+</body></html>

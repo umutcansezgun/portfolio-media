@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00:01.080 --> 00:00:03.930 line:6% position:50% align:center size:80%
+Yapay zeka ajanları, gerçek bir
+ürün tasarımı problemini
+
+00:00:03.970 --> 00:00:06.760 line:6% position:50% align:center size:80%
+bir tasarımcı yönü belirlemeden
+çözebilir mi?
+
+00:00:06.800 --> 00:00:10.910 line:6% position:50% align:center size:80%
+Bunu görmek için bir lojistik operasyon
+aracına tasarım sistemi kurdum,
+
+00:00:10.950 --> 00:00:14.900 line:6% position:50% align:center size:80%
+yani renklerin, ölçülerin ve bileşenlerin
+kurallarını tek bir yerde topladım.
+
+00:00:14.940 --> 00:00:19.770 line:6% position:50% align:center size:80%
+Sonra basit bir deney tasarladım:
+aynı ajan, aynı istem, aynı ekran.
+
+00:00:19.810 --> 00:00:23.580 line:6% position:50% align:center size:80%
+Değişen tek şey,
+ajana verdiğim sistem.
+
+00:00:23.620 --> 00:00:27.368 line:6% position:50% align:center size:80%
+Claude'a altı bileşenlik kütüphaneyi ve
+sistem dosyalarının ilk taslağını
+
+00:00:27.408 --> 00:00:30.120 line:6% position:50% align:center size:80%
+benim yazdığım spesifikasyona
+göre ürettirdim.
+
+00:00:30.160 --> 00:00:32.630 line:6% position:50% align:center size:80%
+Her durum renginin ne anlama
+geldiğine ben karar verdim,
+
+00:00:32.670 --> 00:00:37.740 line:6% position:50% align:center size:80%
+ilk denemeden önce de ekranı hangi
+altı kurala göre puanlayacağımı yazdım.
+
+00:00:38.050 --> 00:00:42.240 line:6% position:50% align:center size:80%
+Sonra ajandan daha önce hiç tasarlanmamış
+bir sevkiyat detay ekranı istedim.
+
+00:00:42.280 --> 00:00:43.354 line:6% position:50% align:center size:80%
+Ekran kusursuz görünüyordu.
+
+00:00:43.394 --> 00:00:47.090 line:6% position:50% align:center size:80%
+Ama kodu saydığımda
+31 ihlal çıktı:
+
+00:00:47.130 --> 00:00:50.394 line:6% position:50% align:center size:80%
+22'si sistemin renklerini atlayıp
+ham renk değerlerini kullanıyordu,
+
+00:00:50.434 --> 00:00:53.100 line:6% position:50% align:center size:80%
+9'u ölçü cetvelinin dışındaydı.
+
+00:00:53.140 --> 00:00:55.100 line:6% position:50% align:center size:80%
+Yüzeyde hiçbiri görünmüyordu.
+
+00:00:55.630 --> 00:00:58.760 line:6% position:50% align:center size:80%
+Claude'a sebebini sorduğumda sorunu
+renklerin isimlerine bağladı.
+
+00:00:58.800 --> 00:01:01.990 line:6% position:50% align:center size:80%
+Ama dosyaya baktığımda asıl sorunun
+başka olduğunu gördüm:
+
+00:01:02.030 --> 00:01:04.860 line:6% position:50% align:center size:80%
+ham renkler ajan için
+hâlâ ulaşılabilirdi.
+
+00:01:04.900 --> 00:01:07.450 line:6% position:50% align:center size:80%
+Ben de istemi değil,
+sistemi değiştirdim.
+
+00:01:07.490 --> 00:01:11.670 line:6% position:50% align:center size:80%
+Ham renkleri kapattım, “kaçın” diye yazılmış
+tavsiyeleri kesin kurallara çevirdim,
+
+00:01:11.710 --> 00:01:14.550 line:6% position:50% align:center size:80%
+her bileşene doğru kullanımı kontrol
+eden bir liste ekledim
+
+00:01:14.590 --> 00:01:16.530 line:6% position:50% align:center size:80%
+ve sistemi iki biçimde yayınladım:
+
+00:01:16.570 --> 00:01:20.820 line:6% position:50% align:center size:80%
+tasarımcılar için Figma kütüphanesi,
+ajan için de okuyabileceği dosyalar.
+
+00:01:20.860 --> 00:01:23.800 line:6% position:50% align:center size:80%
+Bu sırada ajanın gözden kaçırdığı
+şeyleri de yakaladım.
+
+00:01:23.840 --> 00:01:28.690 line:6% position:50% align:center size:80%
+“İncelemede” durum etiketi, rengini sistemin
+yasakladığı buton renginden alıyordu,
+
+00:01:28.730 --> 00:01:31.790 line:6% position:50% align:center size:80%
+o duruma kendi rengini verdim.
+
+00:01:31.830 --> 00:01:35.720 line:6% position:50% align:center size:80%
+Ajandan kendi çıktısını denetlemesini
+istediğimde de iki kez yanıldı:
+
+00:01:35.760 --> 00:01:37.990 line:6% position:50% align:center size:80%
+kurala uyan boşlukları ihlal saydı,
+
+00:01:38.030 --> 00:01:40.830 line:6% position:50% align:center size:80%
+“transparent” kelimesini de bir renk sandı.
+
+00:01:40.870 --> 00:01:45.350 line:6% position:50% align:center size:80%
+Kuralın neyi kapsadığına ben karar verdim,
+her çıktıyı iki ayrı yöntemle saydırdım
+
+00:01:45.390 --> 00:01:47.780 line:6% position:50% align:center size:80%
+ve sonuçları kendim uzlaştırdım.
+
+00:01:48.120 --> 00:01:51.920 line:6% position:50% align:center size:80%
+Aynı üç satırlık istemle
+ihlaller 31'den 8'e düştü,
+
+00:01:51.960 --> 00:01:54.780 line:6% position:50% align:center size:80%
+renk ihlallerinin hepsi kayboldu.
+
+00:01:54.820 --> 00:01:56.720 line:6% position:50% align:center size:80%
+Kalan 8'in hepsi ölçü kuralıydı,
+
+00:01:56.760 --> 00:01:59.650 line:6% position:50% align:center size:80%
+çünkü o kural hâlâ dokümanda
+sadece bir liste olarak duruyordu.
+
+00:01:59.690 --> 00:02:01.530 line:6% position:50% align:center size:80%
+Üçüncü denemenin sonucunu da saklamadım:
+
+00:02:01.570 --> 00:02:05.100 line:6% position:50% align:center size:80%
+bütün kuralları elle tekrar yazan
+uzun bir istem sıfır ihlal verdi.
+
+00:02:05.140 --> 00:02:08.300 line:6% position:50% align:center size:80%
+Ama o istem her ekran için
+yeniden yazılmak zorunda,
+
+00:02:08.340 --> 00:02:11.690 line:6% position:50% align:center size:80%
+sistem ise her seferinde okunuyor.
+
+00:02:11.730 --> 00:02:15.220 line:6% position:50% align:center size:80%
+Yani ajan çok hızlı üretiyor,
+ama yönlendirme olmadan sorunsuz değil.
+
+00:02:15.260 --> 00:02:18.310 line:6% position:50% align:center size:80%
+Bir gümrük beklemesinin kritik mi yoksa
+sadece gecikme mi olduğuna,
+
+00:02:18.350 --> 00:02:21.350 line:6% position:50% align:center size:80%
+sinyal vermeyen bir sevkiyatın ayrı
+bir durum olup olmadığına
+
+00:02:21.390 --> 00:02:22.910 line:6% position:50% align:center size:80%
+ben karar verdim.
+
+00:02:22.950 --> 00:02:26.710 line:6% position:50% align:center size:80%
+Yön bir istemde değil,
+sistemde durmalı.
+
+00:02:26.750 --> 00:02:30.240 line:6% position:50% align:center size:80%
+Kurduğum sistemi, ajanın ürettiği ekranları
+
+00:02:30.280 --> 00:02:33.570 line:6% position:50% align:center size:80%
+ve üç denemenin sonuçlarını
+bu sayfada inceleyebilirsiniz.
