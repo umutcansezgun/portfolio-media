@@ -1,0 +1,180 @@
+WEBVTT
+
+00:00:01.050 --> 00:00:02.460 line:6% position:50% align:center size:80%
+Hastalandığınızı düşünüyorsunuz.
+
+00:00:02.500 --> 00:00:05.580 line:6% position:50% align:center size:80%
+Güvendiğiniz bir sağlık sitesine
+tüm bilgilerinizi giriyorsunuz
+
+00:00:05.620 --> 00:00:08.200 line:6% position:50% align:center size:80%
+ve karşınıza tek bir şey çıkıyor:
+“Something went wrong.”
+
+00:00:08.240 --> 00:00:11.110 line:6% position:50% align:center size:80%
+Peki bir de görme engelli olsaydınız
+ne yapardınız?
+
+00:00:11.150 --> 00:00:13.950 line:6% position:50% align:center size:80%
+Bu projede Symptom Checker'ın
+erişilebilirliğini denetledim:
+
+00:00:13.990 --> 00:00:16.910 line:6% position:50% align:center size:80%
+İngiltere'de herkese açık
+bir sağlık aracı.
+
+00:00:16.950 --> 00:00:21.170 line:6% position:50% align:center size:80%
+Test ederken aracın yapay zeka asistanı
+sürekli aynı hatayı verdi
+
+00:00:21.210 --> 00:00:24.640 line:6% position:50% align:center size:80%
+ve bu gerçek hata
+denetimimin merkezi oldu.
+
+00:00:24.680 --> 00:00:29.700 line:6% position:50% align:center size:80%
+Önce otomatik bir tarayıcı olan WAVE'i
+kullandım, ama WAVE sadece kodu okuyor.
+
+00:00:29.740 --> 00:00:32.530 line:6% position:50% align:center size:80%
+Sayfanın göremeyen biri için
+nasıl duyulduğunu anlamak için
+
+00:00:32.570 --> 00:00:36.560 line:6% position:50% align:center size:80%
+aracı bir iPhone'da VoiceOver ile
+kendim de test ettim.
+
+00:00:36.600 --> 00:00:38.940 line:6% position:50% align:center size:80%
+WAVE'in bulduğu gerçek renk
+kodlarını Claude'a verdim
+
+00:00:38.980 --> 00:00:43.690 line:6% position:50% align:center size:80%
+ve yazının ne kadar okunaklı olduğunu
+WebAIM'in standart formülüyle hesaplattım.
+
+00:00:43.730 --> 00:00:46.600 line:6% position:50% align:center size:80%
+Sonra her bulguyu uluslararası
+
+00:00:46.640 --> 00:00:50.030 line:6% position:50% align:center size:80%
+erişilebilirlik standardı WCAG'deki
+madde numarasıyla
+
+00:00:50.070 --> 00:00:51.950 line:6% position:50% align:center size:80%
+eşleştirtip tabloya döktürdüm.
+
+00:00:51.990 --> 00:00:55.620 line:6% position:50% align:center size:80%
+Claude tahmin yürütmedi, yalnızca
+kendi tarama sonuçlarımı eşleştirdi.
+
+00:00:55.660 --> 00:00:58.730 line:6% position:50% align:center size:80%
+Hata mesajının kontrastı
+gerekenin ancak yarısındaydı.
+
+00:00:58.770 --> 00:01:03.240 line:6% position:50% align:center size:80%
+Toplamda 5 kritik sorun, 2 orta sorun
+ve doğru yapılmış 2 şey.
+
+00:01:03.280 --> 00:01:05.120 line:6% position:50% align:center size:80%
+Bulguları ciddiyetine göre sıraladım.
+
+00:01:05.160 --> 00:01:08.430 line:6% position:50% align:center size:80%
+Hastanın zaten çaresiz kaldığı
+hata ekranından başladım.
+
+00:01:08.470 --> 00:01:12.130 line:6% position:50% align:center size:80%
+Personalar için Claude'a İngiltere ve
+Kanada hükümetlerinin resmi
+
+00:01:12.170 --> 00:01:15.210 line:6% position:50% align:center size:80%
+erişilebilirlik persona
+rehberlerini araştırttım.
+
+00:01:15.250 --> 00:01:18.190 line:6% position:50% align:center size:80%
+Personaları bu rehberlerdeki
+yapıyla kurdurdum:
+
+00:01:18.230 --> 00:01:21.470 line:6% position:50% align:center size:80%
+yetenek, teknoloji seviyesi
+ve yardımcı teknoloji.
+
+00:01:21.510 --> 00:01:25.170 line:6% position:50% align:center size:80%
+Kullanıcılardan birinin elinde titreme var,
+diğeri ekran okuyucuya bağımlı.
+
+00:01:25.210 --> 00:01:29.800 line:6% position:50% align:center size:80%
+Sonra her sıkıntıyı, denetimimdeki
+gerçek bir bulguya bağlattım.
+
+00:01:29.840 --> 00:01:34.250 line:6% position:50% align:center size:80%
+Önce sonra tasarımları için Claude'a
+daha iyi okunabilirlik için tasarlanmış
+
+00:01:34.290 --> 00:01:36.860 line:6% position:50% align:center size:80%
+bir font ve kontrastı doğrulanmış
+bir renk paleti verdim,
+
+00:01:36.900 --> 00:01:40.900 line:6% position:50% align:center size:80%
+her düzeltmenin hangi WCAG
+maddesini çözdüğünü yazmasını istedim.
+
+00:01:40.940 --> 00:01:43.690 line:6% position:50% align:center size:80%
+İlk taslak tasarım standardımın
+çok altında kaldı,
+
+00:01:43.730 --> 00:01:46.190 line:6% position:50% align:center size:80%
+bu yüzden reddettim
+ve süreci değiştirdim.
+
+00:01:46.230 --> 00:01:48.700 line:6% position:50% align:center size:80%
+Her ekran için önce yazılı öneri,
+
+00:01:48.740 --> 00:01:52.040 line:6% position:50% align:center size:80%
+taslak ancak onayımdan sonra,
+en son Figma.
+
+00:01:52.080 --> 00:01:53.720 line:6% position:50% align:center size:80%
+8 düzeltme önerdim.
+
+00:01:53.760 --> 00:01:56.950 line:6% position:50% align:center size:80%
+Bazıları doğrudan standardı karşıladı,
+örneğin hata mesajının kontrastını
+
+00:01:56.990 --> 00:01:59.000 line:6% position:50% align:center size:80%
+neredeyse dört katına çıkardım.
+
+00:01:59.040 --> 00:02:00.790 line:6% position:50% align:center size:80%
+Bazıları ise benim tasarım kararlarımdı,
+
+00:02:00.830 --> 00:02:04.140 line:6% position:50% align:center size:80%
+örneğin mesaj kutusunun etiketini
+“Add details (optional)” yaptım,
+
+00:02:04.180 --> 00:02:07.160 line:6% position:50% align:center size:80%
+çünkü form semptomu zaten sormuştu.
+
+00:02:07.200 --> 00:02:11.660 line:6% position:50% align:center size:80%
+Bu düzeltmelerle 9 bulgunun tamamı
+WCAG AA standardını karşılıyor.
+
+00:02:11.700 --> 00:02:16.590 line:6% position:50% align:center size:80%
+Yapay zekayla W3C'nin resmi şablonuna göre
+kapsam, hedef seviye ve test tarihini içeren
+
+00:02:16.630 --> 00:02:20.270 line:6% position:50% align:center size:80%
+örnek bir erişilebilirlik
+beyanı hazırladım.
+
+00:02:20.310 --> 00:02:23.750 line:6% position:50% align:center size:80%
+Yapay zeka ölçümü ve raporlamayı
+çok hızlandırdı,
+
+00:02:23.790 --> 00:02:26.780 line:6% position:50% align:center size:80%
+ama bir sayfanın ekran okuyucuda
+kulağa nasıl geldiğini duyamaz.
+
+00:02:26.820 --> 00:02:30.230 line:6% position:50% align:center size:80%
+Bu da, her tasarım kararı da
+benim sorumluluğumdaydı.
+
+00:02:30.660 --> 00:02:36.340 line:6% position:50% align:center size:80%
+Bütün denetimi, her bulgu ve önce sonra
+tasarımıyla bu sayfada inceleyebilirsiniz.
