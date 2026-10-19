@@ -1,0 +1,194 @@
+WEBVTT
+
+00:00:00.620 --> 00:00:03.250 line:6% position:50% align:center size:80%
+Kendi banka hesabınıza erişememek
+
+00:00:03.290 --> 00:00:06.760 line:6% position:50% align:center size:80%
+ve nedenini bile bilmemek
+gerçekten çok sinir bozucu.
+
+00:00:06.800 --> 00:00:08.900 line:6% position:50% align:center size:80%
+Bu projede yapay zeka araçlarını kullanarak
+
+00:00:08.940 --> 00:00:13.310 line:6% position:50% align:center size:80%
+N26 uygulamasının login hatasını kullanıcıya
+nasıl anlattığını yeniden tasarladım.
+
+00:00:13.350 --> 00:00:15.830 line:6% position:50% align:center size:80%
+İşe gerçek kullanıcıların
+ne yaşadığına bakarak başladım.
+
+00:00:15.870 --> 00:00:20.870 line:6% position:50% align:center size:80%
+Claude'a Reddit, Google Play ve bir Alman
+forum sitesindeki şikayetleri araştırttım,
+
+00:00:20.910 --> 00:00:24.620 line:6% position:50% align:center size:80%
+sonra her birini kaynağında
+tek tek kendim doğruladım.
+
+00:00:24.660 --> 00:00:27.450 line:6% position:50% align:center size:80%
+Birçok farklı dilde gerçek şikayetler çıktı.
+
+00:00:27.490 --> 00:00:32.070 line:6% position:50% align:center size:80%
+Rakip ekran görüntüleri için önce Claude,
+Gemini ve OpenAI gibi LLM'leri denedim,
+
+00:00:32.110 --> 00:00:37.360 line:6% position:50% align:center size:80%
+ama hiçbiri gerçek kullanıcı yorumlarındaki
+görselleri anlayamadı.
+
+00:00:37.400 --> 00:00:41.950 line:6% position:50% align:center size:80%
+Bu yüzden Revolut, Monzo ve Wise'ın
+hata ekranlarını kendim topladım.
+
+00:00:41.990 --> 00:00:44.010 line:6% position:50% align:center size:80%
+Hepsinde aynı kör nokta var:
+
+00:00:44.050 --> 00:00:46.890 line:6% position:50% align:center size:80%
+hiçbiri kullanıcıya hesabının
+güvende olduğunu söylemiyor.
+
+00:00:46.930 --> 00:00:49.280 line:6% position:50% align:center size:80%
+Kanıtlar üç yöne işaret ediyordu:
+
+00:00:49.320 --> 00:00:51.210 line:6% position:50% align:center size:80%
+nedeni ve sonraki adımı göstermek,
+
+00:00:51.250 --> 00:00:53.070 line:6% position:50% align:center size:80%
+hesabın güvende olduğunu doğrulamak
+
+00:00:53.110 --> 00:00:55.040 line:6% position:50% align:center size:80%
+ve canlı bir durum göstermek.
+
+00:00:55.080 --> 00:00:57.180 line:6% position:50% align:center size:80%
+Claude'a sektör araştırması yaptırdım,
+
+00:00:57.220 --> 00:00:59.590 line:6% position:50% align:center size:80%
+üçünü birleştirmenin daha güçlü
+olduğunu gördüm
+
+00:00:59.630 --> 00:01:01.830 line:6% position:50% align:center size:80%
+ve bunları üç ilkem olarak tuttum.
+
+00:01:01.870 --> 00:01:04.220 line:6% position:50% align:center size:80%
+Mevcut bozuk akışı olduğu gibi bıraktım,
+
+00:01:04.260 --> 00:01:07.810 line:6% position:50% align:center size:80%
+ama önerdiğim akışa bilinçli olarak
+bir karar noktası ekledim,
+
+00:01:07.850 --> 00:01:11.040 line:6% position:50% align:center size:80%
+çünkü kanıtlarım tekrar denemenin
+her zaman işe yaramadığını gösteriyordu.
+
+00:01:11.080 --> 00:01:13.100 line:6% position:50% align:center size:80%
+Wireframe'leri önce bir deftere taslakladım,
+
+00:01:13.140 --> 00:01:16.190 line:6% position:50% align:center size:80%
+sonra Claude'u Figma'ya bağlayarak
+dijitalde tasarlattım.
+
+00:01:16.230 --> 00:01:19.020 line:6% position:50% align:center size:80%
+Prompt mühendisliği bilgim
+en çok burada işime yaradı.
+
+00:01:19.060 --> 00:01:21.230 line:6% position:50% align:center size:80%
+Yapay zekayı adım adım yönlendirdim,
+
+00:01:21.270 --> 00:01:23.290 line:6% position:50% align:center size:80%
+hangi bileşenin nereye gideceğini
+
+00:01:23.330 --> 00:01:25.380 line:6% position:50% align:center size:80%
+ve hangi ilkeye bağlı olduğunu tarif ettim.
+
+00:01:25.420 --> 00:01:28.040 line:6% position:50% align:center size:80%
+Yüksek detaylı arayüz için Claude'a N26'nın
+
+00:01:28.080 --> 00:01:31.920 line:6% position:50% align:center size:80%
+gerçek renklerini, fontlarını ve ekran
+görüntülerini referans olarak verdim.
+
+00:01:31.960 --> 00:01:33.680 line:6% position:50% align:center size:80%
+Yapay zeka hızlı ilerlememi sağladı,
+
+00:01:33.720 --> 00:01:37.620 line:6% position:50% align:center size:80%
+ama detaylı bir tasarım sistemi içinde
+hata yapmaya çok meyilliydi.
+
+00:01:37.660 --> 00:01:41.790 line:6% position:50% align:center size:80%
+Bu yüzden her sonucu kontrol ettim ve
+birçok kez revizyona geri gönderdim.
+
+00:01:41.830 --> 00:01:44.890 line:6% position:50% align:center size:80%
+Figma prototipini Zoom üzerinden
+beş kişiyle test ettim;
+
+00:01:44.930 --> 00:01:47.000 line:6% position:50% align:center size:80%
+hepsi başka bankaların mobil
+uygulamalarını kullanıyor.
+
+00:01:47.040 --> 00:01:49.530 line:6% position:50% align:center size:80%
+Her biri önce mevcut ekranı,
+sonra benim tasarımımı gördü
+
+00:01:49.570 --> 00:01:51.090 line:6% position:50% align:center size:80%
+ve iki soruyu cevapladı.
+
+00:01:51.130 --> 00:01:54.530 line:6% position:50% align:center size:80%
+Birincisi: “Neler olduğunu anlıyor musunuz,
+ne yapardınız?”
+
+00:01:54.570 --> 00:01:57.450 line:6% position:50% align:center size:80%
+İkincisi: “Bu deneyim bankaya
+olan güveninizi nasıl etkiledi?”
+
+00:01:57.490 --> 00:01:59.270 line:6% position:50% align:center size:80%
+Notlar için Otter.ai kullandım,
+
+00:01:59.310 --> 00:02:01.440 line:6% position:50% align:center size:80%
+böylece kullanıcılara odaklanabildim.
+
+00:02:01.480 --> 00:02:04.440 line:6% position:50% align:center size:80%
+Hatayı anlayanların oranı beşte birden
+beşte dörde çıktı,
+
+00:02:04.480 --> 00:02:06.960 line:6% position:50% align:center size:80%
+bankaya duyulan güven ise
+iki katından fazla arttı.
+
+00:02:07.000 --> 00:02:08.690 line:6% position:50% align:center size:80%
+Yapay zeka süreci hızlandırdı,
+
+00:02:08.730 --> 00:02:12.170 line:6% position:50% align:center size:80%
+ama kullanıcının o ekranı görünce
+ne hissettiğini anlayamıyor.
+
+00:02:12.210 --> 00:02:13.620 line:6% position:50% align:center size:80%
+Bunu anlamak hep bana kaldı.
+
+00:02:13.660 --> 00:02:17.160 line:6% position:50% align:center size:80%
+Yapay zekayı doğru yönlendirmezseniz
+kötü sonuçlar üretiyor
+
+00:02:17.200 --> 00:02:19.580 line:6% position:50% align:center size:80%
+ve her detayı kontrol etmeniz gerekiyor.
+
+00:02:19.620 --> 00:02:20.560 line:6% position:50% align:center size:80%
+Her kararı ben verdim,
+
+00:02:20.600 --> 00:02:23.970 line:6% position:50% align:center size:80%
+problemi bulmaktan çözümü üretmeye
+ve tasarlamaya kadar,
+
+00:02:24.010 --> 00:02:25.920 line:6% position:50% align:center size:80%
+ve kontrol hep bende kaldı.
+
+00:02:25.960 --> 00:02:27.390 line:6% position:50% align:center size:80%
+Yapay zeka neyse o olarak kaldı:
+
+00:02:27.430 --> 00:02:29.560 line:6% position:50% align:center size:80%
+süreci hızlandıran bir araç.
+
+00:02:29.600 --> 00:02:33.520 line:6% position:50% align:center size:80%
+Projenin tamamını, attığım her adımla
+birlikte hemen aşağıda bulabilirsiniz.

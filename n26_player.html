@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Umutcan Sezgun</title></head><body style="margin:0;background:#000"><link rel="preload" as="image" href="https://umutcansezgun.github.io/portfolio-media/n26_poster.jpg"><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+html,body{margin:0;height:100%;background:transparent;overflow:hidden}
+#w{position:absolute;inset:0;background:#000;overflow:hidden;font-family:Lexend,system-ui,sans-serif;-webkit-user-select:none;user-select:none}
+#v{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:block}
+#po{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+#cl{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;pointer-events:none}
+#cb{position:absolute;left:50%;transform:translateX(-50%);display:none;box-sizing:border-box;background:#000;color:#fff;border-radius:12px;padding:14px 34px;font:500 34px/1.3 Lexend,system-ui,sans-serif;text-align:center;white-space:nowrap;align-items:center;justify-content:center}
+#pb{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border:0;border-radius:50%;background:rgba(17,18,20,.82);cursor:pointer;padding:0;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#pb:hover{transform:scale(1.06);background:#111214}
+#fo{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.18);cursor:pointer}
+#fo span{display:flex;align-items:center;gap:14px;background:rgba(17,18,20,.88);color:#fff;border-radius:999px;padding:18px 30px;font:500 clamp(16px,1.5vw,24px)/1 Lexend,system-ui,sans-serif;box-shadow:0 10px 30px rgba(17,18,20,.25);transition:transform .2s,background .2s}
+#fo:hover span{transform:scale(1.04);background:#111214}
+#pb svg{display:block;margin-left:33px}
+#bar{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 8px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:none;opacity:1;transition:opacity .25s}
+#w.idle #bar{opacity:0}#w.idle{cursor:none}
+#pr{position:relative;height:14px;cursor:pointer;margin:0 4px}
+#pr i{position:absolute;left:0;right:0;top:6px;height:3px;border-radius:2px;background:rgba(255,255,255,.3)}
+#pr b{position:absolute;left:0;top:6px;height:3px;border-radius:2px;background:#fff}
+#pr s{position:absolute;top:2px;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:#fff}
+#row{display:flex;align-items:center;gap:6px;height:36px}
+#row button{background:none;border:0;color:#fff;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;height:36px}
+#tm{font:500 13px/1 Lexend,system-ui,sans-serif;margin-left:4px;font-variant-numeric:tabular-nums}
+#sp{flex:1}
+#cc{font:600 12px/1 Lexend,system-ui,sans-serif;letter-spacing:.04em}
+#cc span{border:1.5px solid #fff;border-radius:4px;padding:3px 5px}
+#cc.on span{background:#fff;color:#000}
+</style>
+<div id="w">
+<video id="v" playsinline preload="metadata" crossorigin="anonymous"><source src="https://umutcansezgun.github.io/portfolio-media/n26.mp4" type="video/mp4"><track kind="subtitles" srclang="tr" label="Türkçe" src="https://umutcansezgun.github.io/portfolio-media/n26_tr.vtt"></video>
+<img id="po" src="https://umutcansezgun.github.io/portfolio-media/n26_poster.jpg" alt="" fetchpriority="high" decoding="async">
+<div id="cl"><div id="cb"></div></div>
+<button id="pb" aria-label="Play video"><svg width="34" height="38" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg></button>
+<div id="fo" role="button" aria-label="Watch in full screen"><span><svg width="20" height="22" viewBox="0 0 34 38"><path d="M2 3.5v31c0 1.5 1.6 2.4 2.9 1.7l26-15.5c1.3-.8 1.3-2.6 0-3.4l-26-15.5C3.6 1.1 2 2 2 3.5z" fill="#fff"/></svg>Click to watch in full screen</span></div>
+<div id="bar">
+<div id="pr"><i></i><b></b><s></s></div>
+<div id="row">
+<button id="pp" aria-label="Play or pause"></button>
+<button id="mu" aria-label="Mute"></button>
+<span id="tm">0:00 / 0:00</span><span id="sp"></span>
+<button id="cc" aria-label="Turkish subtitles" title="Türkçe altyazı"><span>CC</span></button>
+<button id="fs" aria-label="Fullscreen"></button>
+</div></div>
+</div>
+<script>
+(function(){
+var C=[{"s":0.62,"e":3.29,"t":["Kendi banka hesabınıza erişememek"],"w":0,"y0":null,"y1":null},{"s":3.29,"e":6.8,"t":["ve nedenini bile bilmemek","gerçekten çok sinir bozucu."],"w":454,"y0":930,"y1":1041},{"s":6.8,"e":8.94,"t":["Bu projede yapay zeka araçlarını kullanarak"],"w":740,"y0":875,"y1":1041},{"s":8.94,"e":13.35,"t":["N26 uygulamasının login hatasını kullanıcıya","nasıl anlattığını yeniden tasarladım."],"w":814,"y0":930,"y1":1041},{"s":13.35,"e":15.87,"t":["İşe gerçek kullanıcıların","ne yaşadığına bakarak başladım."],"w":0,"y0":null,"y1":null},{"s":15.87,"e":20.91,"t":["Claude'a Reddit, Google Play ve bir Alman","forum sitesindeki şikayetleri araştırttım,"],"w":652,"y0":930,"y1":1041},{"s":20.91,"e":24.66,"t":["sonra her birini kaynağında","tek tek kendim doğruladım."],"w":646,"y0":930,"y1":1041},{"s":24.66,"e":27.49,"t":["Birçok farklı dilde gerçek şikayetler çıktı."],"w":567,"y0":930,"y1":1041},{"s":27.49,"e":32.11,"t":["Rakip ekran görüntüleri için önce Claude,","Gemini ve OpenAI gibi LLM'leri denedim,"],"w":673,"y0":930,"y1":1041},{"s":32.11,"e":37.4,"t":["ama hiçbiri gerçek kullanıcı yorumlarındaki","görselleri anlayamadı."],"w":762,"y0":930,"y1":1041},{"s":37.4,"e":41.99,"t":["Bu yüzden Revolut, Monzo ve Wise'ın","hata ekranlarını kendim topladım."],"w":507,"y0":930,"y1":1041},{"s":41.99,"e":44.05,"t":["Hepsinde aynı kör nokta var:"],"w":740,"y0":930,"y1":1041},{"s":44.05,"e":46.93,"t":["hiçbiri kullanıcıya hesabının","güvende olduğunu söylemiyor."],"w":526,"y0":930,"y1":1041},{"s":46.93,"e":49.32,"t":["Kanıtlar üç yöne işaret ediyordu:"],"w":504,"y0":930,"y1":1041},{"s":49.32,"e":51.25,"t":["nedeni ve sonraki adımı göstermek,"],"w":813,"y0":930,"y1":1041},{"s":51.25,"e":53.11,"t":["hesabın güvende olduğunu doğrulamak"],"w":676,"y0":930,"y1":1041},{"s":53.11,"e":55.08,"t":["ve canlı bir durum göstermek."],"w":575,"y0":930,"y1":1041},{"s":55.08,"e":57.22,"t":["Claude'a sektör araştırması yaptırdım,"],"w":747,"y0":930,"y1":1041},{"s":57.22,"e":59.63,"t":["üçünü birleştirmenin daha güçlü","olduğunu gördüm"],"w":747,"y0":930,"y1":1041},{"s":59.63,"e":61.87,"t":["ve bunları üç ilkem olarak tuttum."],"w":804,"y0":930,"y1":1041},{"s":61.87,"e":64.26,"t":["Mevcut bozuk akışı olduğu gibi bıraktım,"],"w":537,"y0":930,"y1":1041},{"s":64.26,"e":67.85,"t":["ama önerdiğim akışa bilinçli olarak","bir karar noktası ekledim,"],"w":914,"y0":930,"y1":1041},{"s":67.85,"e":71.08,"t":["çünkü kanıtlarım tekrar denemenin","her zaman işe yaramadığını gösteriyordu."],"w":914,"y0":930,"y1":1041},{"s":71.08,"e":73.14,"t":["Wireframe'leri önce bir deftere taslakladım,"],"w":866,"y0":930,"y1":1041},{"s":73.14,"e":76.23,"t":["sonra Claude'u Figma'ya bağlayarak","dijitalde tasarlattım."],"w":717,"y0":930,"y1":1041},{"s":76.23,"e":79.06,"t":["Prompt mühendisliği bilgim","en çok burada işime yaradı."],"w":0,"y0":null,"y1":null},{"s":79.06,"e":81.27,"t":["Yapay zekayı adım adım yönlendirdim,"],"w":648,"y0":930,"y1":1041},{"s":81.27,"e":83.33,"t":["hangi bileşenin nereye gideceğini"],"w":884,"y0":930,"y1":1041},{"s":83.33,"e":85.42,"t":["ve hangi ilkeye bağlı olduğunu tarif ettim."],"w":884,"y0":930,"y1":1041},{"s":85.42,"e":88.08,"t":["Yüksek detaylı arayüz için Claude'a N26'nın"],"w":683,"y0":930,"y1":1041},{"s":88.08,"e":91.96,"t":["gerçek renklerini, fontlarını ve ekran","görüntülerini referans olarak verdim."],"w":683,"y0":930,"y1":1041},{"s":91.96,"e":93.72,"t":["Yapay zeka hızlı ilerlememi sağladı,"],"w":549,"y0":930,"y1":1041},{"s":93.72,"e":97.66,"t":["ama detaylı bir tasarım sistemi içinde","hata yapmaya çok meyilliydi."],"w":714,"y0":930,"y1":1041},{"s":97.66,"e":101.83,"t":["Bu yüzden her sonucu kontrol ettim ve","birçok kez revizyona geri gönderdim."],"w":679,"y0":930,"y1":1041},{"s":101.83,"e":104.93,"t":["Figma prototipini Zoom üzerinden","beş kişiyle test ettim;"],"w":698,"y0":875,"y1":1041},{"s":104.93,"e":107.04,"t":["hepsi başka bankaların mobil","uygulamalarını kullanıyor."],"w":698,"y0":875,"y1":986},{"s":107.04,"e":109.57,"t":["Her biri önce mevcut ekranı,","sonra benim tasarımımı gördü"],"w":638,"y0":875,"y1":986},{"s":109.57,"e":111.13,"t":["ve iki soruyu cevapladı."],"w":654,"y0":875,"y1":986},{"s":111.13,"e":114.57,"t":["Birincisi: “Neler olduğunu anlıyor musunuz,","ne yapardınız?”"],"w":834,"y0":875,"y1":986},{"s":114.57,"e":117.49,"t":["İkincisi: “Bu deneyim bankaya","olan güveninizi nasıl etkiledi?”"],"w":754,"y0":875,"y1":986},{"s":117.49,"e":119.31,"t":["Notlar için Otter.ai kullandım,"],"w":754,"y0":875,"y1":986},{"s":119.31,"e":121.48,"t":["böylece kullanıcılara odaklanabildim."],"w":779,"y0":875,"y1":1041},{"s":121.48,"e":124.48,"t":["Hatayı anlayanların oranı beşte birden","beşte dörde çıktı,"],"w":661,"y0":930,"y1":1041},{"s":124.48,"e":127.0,"t":["bankaya duyulan güven ise","iki katından fazla arttı."],"w":861,"y0":930,"y1":1041},{"s":127.0,"e":128.73,"t":["Yapay zeka süreci hızlandırdı,"],"w":538,"y0":930,"y1":1041},{"s":128.73,"e":132.21,"t":["ama kullanıcının o ekranı görünce","ne hissettiğini anlayamıyor."],"w":746,"y0":930,"y1":1041},{"s":132.21,"e":133.66,"t":["Bunu anlamak hep bana kaldı."],"w":0,"y0":null,"y1":null},{"s":133.66,"e":137.2,"t":["Yapay zekayı doğru yönlendirmezseniz","kötü sonuçlar üretiyor"],"w":658,"y0":875,"y1":1041},{"s":137.2,"e":139.62,"t":["ve her detayı kontrol etmeniz gerekiyor."],"w":760,"y0":930,"y1":1041},{"s":139.62,"e":140.6,"t":["Her kararı ben verdim,"],"w":760,"y0":930,"y1":1041},{"s":140.6,"e":144.01,"t":["problemi bulmaktan çözümü üretmeye","ve tasarlamaya kadar,"],"w":783,"y0":930,"y1":1041},{"s":144.01,"e":145.96,"t":["ve kontrol hep bende kaldı."],"w":762,"y0":930,"y1":1041},{"s":145.96,"e":147.43,"t":["Yapay zeka neyse o olarak kaldı:"],"w":501,"y0":930,"y1":1041},{"s":147.43,"e":149.6,"t":["süreci hızlandıran bir araç."],"w":694,"y0":930,"y1":1041},{"s":149.6,"e":153.52,"t":["Projenin tamamını, attığım her adımla","birlikte hemen aşağıda bulabilirsiniz."],"w":0,"y0":null,"y1":null}];
+var w=document.getElementById('w'),v=document.getElementById('v'),cl=document.getElementById('cl'),cb=document.getElementById('cb'),
+pb=document.getElementById('pb'),bar=document.getElementById('bar'),pr=document.getElementById('pr'),pp=document.getElementById('pp'),
+mu=document.getElementById('mu'),po=document.getElementById('po'),tm=document.getElementById('tm'),cc=document.getElementById('cc'),fs=document.getElementById('fs');
+var I={play:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M7 4.5v15c0 .8.9 1.3 1.6.9l12-7.5c.6-.4.6-1.4 0-1.8l-12-7.5C7.9 3.2 7 3.7 7 4.5z" fill="#fff"/></svg>',
+pause:'<svg width="20" height="20" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="#fff"/><rect x="14" y="4" width="4" height="16" rx="1" fill="#fff"/></svg>',
+vol:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+mute:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#fff"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',
+fs:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+var PAGE=true,on=false,cur=-1,drag=false,tr=v.textTracks&&v.textTracks[0];
+if(tr)tr.mode='disabled';
+function fit(){var s=w.clientWidth/1920,h=w.clientHeight/1080,k=Math.min(s,h);cl.style.transform='translate('+((w.clientWidth-1920*k)/2)+'px,'+((w.clientHeight-1080*k)/2)+'px) scale('+k+')';}
+function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+('0'+t%60).slice(-2);}
+function cap(){var t=v.currentTime,i=-1;if(on){for(var j=0;j<C.length;j++){if(t>=C[j].s&&t<C[j].e){i=j;break;}}}
+ if(i!==cur){cur=i;if(i<0){cb.style.display='none';}else{var c=C[i];cb.innerHTML=c.t.join('<br>');cb.style.minWidth=c.w+'px';
+  var y1=c.y1||1030,y0=c.y0||1030;cb.style.minHeight=(y1-y0)+'px';cb.style.top='auto';cb.style.bottom=(1080-y1)+'px';cb.style.display='flex';}}}
+function ui(){pp.innerHTML=v.paused?I.play:I.pause;mu.innerHTML=v.muted?I.mute:I.vol;var d=v.duration||0,p=d?v.currentTime/d*100:0;
+ pr.querySelector('b').style.width=p+'%';pr.querySelector('s').style.left=p+'%';tm.textContent=fmt(v.currentTime)+' / '+fmt(d);}
+function loop(){cap();ui();if(!v.paused)requestAnimationFrame(loop);}
+var it;function wake(){w.classList.remove('idle');clearTimeout(it);it=setTimeout(function(){if(!drag)w.classList.add('idle');},2500);}
+function start(){pb.style.display='none';bar.style.display='block';v.play();wake();}
+var Q={};(location.hash||'').slice(1).split('&').forEach(function(x){var k=x.split('=');if(k[0])Q[k[0]]=k[1];});
+var T0=PAGE&&parseFloat(Q.t)>0?parseFloat(Q.t):0;if(PAGE&&Q.cc==='1'){on=true;cc.classList.add('on');}
+if(T0){v.addEventListener('loadedmetadata',function(){v.addEventListener('seeked',function(){po.style.display='none';},{once:true});v.currentTime=T0;ui();cap();},{once:true});}
+pb.onclick=function(){if(T0)goFs();start();};
+var fo=document.getElementById('fo');if(T0){pb.style.display='none';fo.style.display='flex';fo.onclick=function(){fo.style.display='none';goFs();start();};}
+v.addEventListener('click',function(){if(bar.style.display!=='block'){start();return;}v.paused?v.play():v.pause();});
+pp.onclick=function(){v.paused?v.play():v.pause();};
+mu.onclick=function(){v.muted=!v.muted;ui();};
+cc.onclick=function(){on=!on;cc.classList.toggle('on',on);cur=-2;cap();};
+v.addEventListener('play',function(){if(fo)fo.style.display='none';po.style.display='none';pb.style.display='none';bar.style.display='block';wake();loop();});
+v.addEventListener('pause',function(){wake();ui();cap();});
+['timeupdate','seeked','loadedmetadata','volumechange','ended'].forEach(function(e){v.addEventListener(e,function(){ui();cap();});});
+w.addEventListener('mousemove',wake);w.addEventListener('mouseleave',function(){if(!drag){clearTimeout(it);w.classList.add('idle');}});w.addEventListener('touchstart',wake,{passive:true});
+function seekTo(x){var r=pr.getBoundingClientRect(),f=Math.min(1,Math.max(0,(x-r.left)/r.width));if(v.duration){v.currentTime=f*v.duration;ui();cap();}}
+pr.addEventListener('pointerdown',function(e){drag=true;pr.setPointerCapture(e.pointerId);seekTo(e.clientX);});
+pr.addEventListener('pointermove',function(e){if(drag)seekTo(e.clientX);});
+pr.addEventListener('pointerup',function(){drag=false;});
+var canFs=document.fullscreenEnabled||document.webkitFullscreenEnabled;
+fs.innerHTML=I.fs;
+var PURL='https://umutcansezgun.github.io/portfolio-media/n26_player.html';
+function goFs(){if(canFs){(w.requestFullscreen||w.webkitRequestFullscreen).call(w);}else if(PAGE&&v.webkitEnterFullscreen){v.webkitEnterFullscreen();}}
+fs.onclick=function(){var d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d);return;}
+ if(canFs||PAGE){goFs();return;}
+ var t=v.currentTime,wasPlaying=!v.paused;var pw=window.open(PURL+'#t='+t.toFixed(2)+'&cc='+(on?1:0),'_blank');
+ if(!pw)return;v.pause();last={t:t,cc:on,playing:wasPlaying};
+ var pt=setInterval(function(){if(pw.closed){clearInterval(pt);resume();}},400);};
+var last=null,PORIGIN=new URL(PURL,location.href).origin;
+window.addEventListener('message',function(e){if(e.origin===PORIGIN&&e.data&&e.data.type==='ucs-player'&&typeof e.data.t==='number')last=e.data;});
+function resume(){if(!last)return;var d=last;last=null;v.currentTime=d.t;on=!!d.cc;cc.classList.toggle('on',on);cur=-2;
+ po.style.display='none';pb.style.display='none';bar.style.display='block';
+ if(d.playing){var pr2=v.play();if(pr2&&pr2.catch)pr2.catch(function(){ui();});}ui();cap();wake();}
+if(PAGE&&window.opener){var post=function(){try{window.opener.postMessage({type:'ucs-player',t:v.currentTime,cc:on,playing:!v.paused&&!v.ended},'*');}catch(e){}};
+ ['timeupdate','play','pause','seeked'].forEach(function(e){v.addEventListener(e,post);});
+ cc.addEventListener('click',post);window.addEventListener('pagehide',post);
+ var wasFs=false;var fsc=function(){if(document.fullscreenElement||document.webkitFullscreenElement){wasFs=true;}else if(wasFs){post();window.close();}};
+ document.addEventListener('fullscreenchange',fsc);document.addEventListener('webkitfullscreenchange',fsc);
+ v.addEventListener('webkitendfullscreen',function(){post();window.close();});}
+v.addEventListener('webkitbeginfullscreen',function(){if(tr)tr.mode=on?'showing':'disabled';});
+v.addEventListener('webkitendfullscreen',function(){if(tr)tr.mode='disabled';});
+window.addEventListener('resize',fit);document.addEventListener('fullscreenchange',fit);document.addEventListener('webkitfullscreenchange',fit);
+fit();ui();
+})();
+</script>
+</body></html>
