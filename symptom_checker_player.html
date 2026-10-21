@@ -60,7 +60,7 @@ function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+('0'+
 function cap(){var t=v.currentTime,i=-1;if(on){for(var j=0;j<C.length;j++){if(t>=C[j].s&&t<C[j].e){i=j;break;}}}
  if(i!==cur){cur=i;if(i<0){cb.style.display='none';}else{var c=C[i];cb.innerHTML=c.t.join('<br>');cb.style.minWidth=c.w+'px';
   var y1=c.y1||1030,y0=c.y0||1030;cb.style.minHeight=(y1-y0)+'px';cb.style.top='auto';cb.style.bottom=(1080-y1)+'px';cb.style.display='flex';}}}
-function ui(){pp.innerHTML=v.paused?I.play:I.pause;mu.innerHTML=v.muted?I.mute:I.vol;var d=v.duration||0,p=d?v.currentTime/d*100:0;
+function ui(){var a=v.paused?'play':'pause',b=v.muted?'mute':'vol';if(pp.dataset.s!==a){pp.innerHTML=I[a];pp.dataset.s=a;}if(mu.dataset.s!==b){mu.innerHTML=I[b];mu.dataset.s=b;}var d=v.duration||0,p=d?v.currentTime/d*100:0;
  pr.querySelector('b').style.width=p+'%';pr.querySelector('s').style.left=p+'%';tm.textContent=fmt(v.currentTime)+' / '+fmt(d);}
 function loop(){cap();ui();if(!v.paused)requestAnimationFrame(loop);}
 var it;function wake(){w.classList.remove('idle');clearTimeout(it);it=setTimeout(function(){if(!drag)w.classList.add('idle');},2500);}
